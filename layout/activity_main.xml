@@ -2,29 +2,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center_horizontal"
+    android:padding="16dp">
 
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register Patient" />
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="WELCOME TO CLIQUE"
+    android:textSize="24sp"
+    android:textColor="#FFFFFF"
+    android:textStyle="bold"
+    android:background="#4CAF50"
+    android:gravity="center"
+    android:padding="16dp"
+    android:layout_marginBottom="32dp" />
 
-    <Button
-        android:id="@+id/btnAppointment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Book Appointment" />
+<Button
+    android:id="@+id/btnRegister"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Register Patient" />
 
-    <Button
-        android:id="@+id/btnConsultation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Consultation Details" />
 
-    <Button
-        android:id="@+id/btnBilling"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Billing" />
+<Button
+    android:id="@+id/btnAppointment"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Book Appointment" />
+
+<Button
+    android:id="@+id/btnConsultation"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Consultation Details" />
+
+
+<Button
+    android:id="@+id/btnBilling"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Billing" />
+
 </LinearLayout>
