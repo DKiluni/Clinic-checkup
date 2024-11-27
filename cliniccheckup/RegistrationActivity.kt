@@ -1,12 +1,14 @@
 package com.example.cliniccheckup
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class RegistrationActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
@@ -15,6 +17,11 @@ class RegistrationActivity : AppCompatActivity() {
         val etAge = findViewById<EditText>(R.id.etAge)
         val etContact = findViewById<EditText>(R.id.etContact)
         val btnSubmit = findViewById<Button>(R.id.btnSubmit)
+        val btnBack = findViewById<Button>(R.id.btnBack)
+
+        btnBack.setOnClickListener {
+            finish()
+        }
 
         btnSubmit.setOnClickListener {
             val name = etName.text.toString()
