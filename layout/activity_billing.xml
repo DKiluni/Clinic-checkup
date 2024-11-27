@@ -1,0 +1,39 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/etConsultationFee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Consultation Fee"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAdditionalCharges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Additional Charges"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate Bill" />
+
+        <TextView
+            android:id="@+id/tvBillSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bill Summary Will Appear Here"
+            android:paddingTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
