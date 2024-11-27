@@ -15,6 +15,12 @@ class AppointmentActivity : AppCompatActivity() {
         val etTime = findViewById<EditText>(R.id.etTime)
         val btnBook = findViewById<Button>(R.id.btnBook)
 
+        val btnBack = findViewById<Button>(R.id.btnBack)
+
+        btnBack.setOnClickListener {
+            finish()
+        }
+
         btnBook.setOnClickListener {
             val date = etDate.text.toString()
             val time = etTime.text.toString()
