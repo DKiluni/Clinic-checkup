@@ -17,6 +17,11 @@ class ConsultationActivity : AppCompatActivity() {
         val etPrescription = findViewById<EditText>(R.id.etPrescription)
         val btnSubmit = findViewById<Button>(R.id.btnSubmit)
         val tvDetails = findViewById<TextView>(R.id.tvDetails)
+        val btnBack = findViewById<Button>(R.id.btnBack)
+
+        btnBack.setOnClickListener {
+            finish()
+        }
 
         btnSubmit.setOnClickListener {
             val doctor = etDoctor.text.toString()
