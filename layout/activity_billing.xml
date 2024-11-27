@@ -41,5 +41,11 @@
             android:text="Bill Summary Will Appear Here"
             android:paddingTop="16dp" />
 
+        <Button
+            android:id="@+id/btnPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose payment method" />
+
     </LinearLayout>
 </ScrollView>
