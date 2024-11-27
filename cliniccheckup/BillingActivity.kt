@@ -17,15 +17,21 @@ class BillingActivity : AppCompatActivity() {
         val btnCalculate = findViewById<Button>(R.id.btnCalculate)
         val tvBillSummary = findViewById<TextView>(R.id.tvBillSummary)
 
+        val btnBack = findViewById<Button>(R.id.btnBack)
+
+        btnBack.setOnClickListener {
+            finish()
+        }
         btnCalculate.setOnClickListener {
             val consultationFee = etConsultationFee.text.toString().toDoubleOrNull()
             val additionalCharges = etAdditionalCharges.text.toString().toDoubleOrNull()
 
+
             if (consultationFee != null && additionalCharges != null) {
                 val total = consultationFee + additionalCharges
-                val billSummary = "Consultation Fee: $$consultationFee\n" +
-                        "Additional Charges: $$additionalCharges\n" +
-                        "Total Bill: $$total"
+                val billSummary = "Consultation Fee: KES $consultationFee\n" +
+                        "Additional Charges: KES $additionalCharges\n" +
+                        "Total Bill: KES $total"
                 tvBillSummary.text = billSummary
             } else {
                 Toast.makeText(this, "Please enter valid amounts", Toast.LENGTH_LONG).show()
