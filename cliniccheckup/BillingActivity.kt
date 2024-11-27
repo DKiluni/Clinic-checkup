@@ -1,5 +1,6 @@
 package com.example.cliniccheckup
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -16,6 +17,7 @@ class BillingActivity : AppCompatActivity() {
         val etAdditionalCharges = findViewById<EditText>(R.id.etAdditionalCharges)
         val btnCalculate = findViewById<Button>(R.id.btnCalculate)
         val tvBillSummary = findViewById<TextView>(R.id.tvBillSummary)
+        val btnPayment = findViewById<Button>(R.id.btnPayment)
 
         val btnBack = findViewById<Button>(R.id.btnBack)
 
@@ -27,6 +29,7 @@ class BillingActivity : AppCompatActivity() {
             val additionalCharges = etAdditionalCharges.text.toString().toDoubleOrNull()
 
 
+
             if (consultationFee != null && additionalCharges != null) {
                 val total = consultationFee + additionalCharges
                 val billSummary = "Consultation Fee: KES $consultationFee\n" +
@@ -36,6 +39,9 @@ class BillingActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Please enter valid amounts", Toast.LENGTH_LONG).show()
             }
+        }
+        btnPayment.setOnClickListener {
+            startActivity(Intent(this, PaymentActivity::class.java))
         }
     }
 }
